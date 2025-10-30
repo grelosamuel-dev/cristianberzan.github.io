@@ -1,0 +1,323 @@
+import React from 'react';
+import { Snowflake, Phone, Mail, MapPin, Star, Award, Shield, Clock, CheckCircle } from 'lucide-react';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      {/* Header */}
+      <header className="bg-white shadow-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-3">
+              <div className="bg-blue-600 p-2 rounded-lg">
+                <Snowflake className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">Cristian's Snow Removal</h1>
+                <p className="text-sm text-gray-600">Reliable • Honest • Hardworking</p>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-4 text-sm text-gray-600">
+              <Phone className="h-4 w-4" />
+              <span>579-490-8622</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Professional Snow Removal
+              <br />
+              <span className="text-blue-600">Since 2014</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Over a decade of experience keeping driveways, sidewalks, and walkways clear and safe. 
+              I take pride in my work and treat every property like it's my own.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:5794908622" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+              >
+                <Phone className="h-5 w-5" />
+                <span>Call Now: (579) 490-8622</span>
+              </a>
+              <a 
+                href="mailto:cristian.berzan@icloud.com" 
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+              >
+                <Mail className="h-5 w-5" />
+                <span>Email Me</span>
+              </a>
+            </div>
+          </div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-blue-600">10+</div>
+              <div className="text-gray-600">Years Experience</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-blue-600">500+</div>
+              <div className="text-gray-600">Properties Served</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-blue-600">24/7</div>
+              <div className="text-gray-600">Emergency Service</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="text-3xl font-bold text-blue-600">100%</div>
+              <div className="text-gray-600">Satisfaction Guaranteed</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Me */}
+      <section className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">About Me</h3>
+            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/3">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-1 rounded-full">
+                <div className="bg-white rounded-full p-1">
+                  <div className="bg-gradient-to-br from-gray-200 to-gray-300 border-2 border-dashed rounded-xl w-64 h-64 flex items-center justify-center">
+                    <span className="text-gray-500 text-lg font-medium">Cristian Berzan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-2/3">
+              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Cristian Berzan</h4>
+              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                I started shoveling snow when I was just 8 years old, helping neighbors and family friends. 
+                What began as a way to earn some pocket money quickly turned into a passion for providing 
+                reliable, quality service to my community. For nearly a decade now, I've been the go-to 
+                person for snow removal in my area, building lasting relationships with satisfied customers 
+                who trust me to keep their properties safe and accessible during winter storms.
+              </p>
+              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                I understand that snow doesn't wait for convenient hours, which is why I'm available 
+                around the clock during snow events. My commitment to excellence, punctuality, and 
+                attention to detail has earned me a reputation as the most dependable young professional 
+                in the business.
+              </p>
+              <div className="flex items-center space-x-2 text-yellow-500 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-current" />
+                ))}
+                <span className="text-gray-600 ml-2">Rated 5 Stars by Happy Customers</span>
+              </div>
+              
+              {/* Quick Contact Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="tel:5794908622" 
+                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors duration-200"
+                >
+                  <Phone className="h-5 w-5" />
+                  <span>Call Me Directly</span>
+                </a>
+                <a 
+                  href="mailto:cristian.berzan@icloud.com" 
+                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors duration-200"
+                >
+                  <Mail className="h-5 w-5" />
+                  <span>Send Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">My Services</h3>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Comprehensive snow removal services tailored to your specific needs
+            </p>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                <Snowflake className="h-8 w-8 text-blue-600" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Driveway Clearing</h4>
+              <p className="text-gray-600 mb-4">
+                Complete driveway clearing with attention to edges and garage access. 
+                Salt application available upon request.
+              </p>
+              <div className="text-blue-600 font-semibold">Starting at $30</div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                <MapPin className="h-8 w-8 text-blue-600" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Sidewalk & Walkway</h4>
+              <p className="text-gray-600 mb-4">
+                Safe and thorough clearing of all pedestrian pathways, 
+                including steps and front entrances.
+              </p>
+              <div className="text-blue-600 font-semibold">Starting at $20</div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="h-8 w-8 text-blue-600" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Seasonal Contracts</h4>
+              <p className="text-gray-600 mb-4">
+                Priority service throughout the winter season with guaranteed response times 
+                after snowfall.
+              </p>
+              <div className="text-blue-600 font-semibold">Custom Pricing</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Me */}
+      <section className="py-16 bg-blue-600 text-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Why Choose Cristian's Snow Removal?</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <Award className="h-12 w-12 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-2">10+ Years Experience</h4>
+              <p className="opacity-90">A decade of perfecting my craft and understanding customer needs.</p>
+            </div>
+            <div className="text-center">
+              <Shield className="h-12 w-12 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-2">Reliable Service</h4>
+              <p className="opacity-90">I show up when I say I will, every single time.</p>
+            </div>
+            <div className="text-center">
+              <Clock className="h-12 w-12 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-2">24/7 Availability</h4>
+              <p className="opacity-90">Snow waits for no one - neither do I.</p>
+            </div>
+            <div className="text-center">
+              <CheckCircle className="h-12 w-12 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-2">Quality Guarantee</h4>
+              <p className="opacity-90">100% satisfaction or I'll make it right.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section - Enhanced */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Get Started?</h3>
+          <p className="text-gray-600 text-lg mb-8">
+            Don't let snow pile up! Contact me today for a free quote or to schedule your next snow removal service.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-green-500 hover:border-green-600 transition-colors duration-300">
+              <Phone className="h-12 w-12 text-green-600 mx-auto mb-6" />
+              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Call Me Directly</h4>
+              <a 
+                href="tel:5794908622" 
+                className="text-green-600 text-xl font-bold hover:text-green-700 transition-colors duration-200 block"
+              >
+                (579) 490-8622
+              </a>
+              <p className="text-gray-600 mt-2">Click to call me directly from your phone</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-red-500 hover:border-red-600 transition-colors duration-300">
+              <Mail className="h-12 w-12 text-red-600 mx-auto mb-6" />
+              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Email Me</h4>
+              <a 
+                href="mailto:cristian.berzan@icloud.com" 
+                className="text-red-600 text-xl font-bold hover:text-red-700 transition-colors duration-200 block break-all"
+              >
+                cristian.berzan@icloud.com
+              </a>
+              <p className="text-gray-600 mt-2">Click to send me an email</p>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-8 rounded-xl">
+            <h4 className="text-2xl font-bold mb-4">Emergency Snow Removal Available!</h4>
+            <p className="text-lg opacity-90 mb-6">
+              Heavy snowfall? Ice storm? Call anytime - I'm ready to help keep your property safe and accessible.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:5794908622" 
+                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors duration-200"
+              >
+                <Phone className="h-5 w-5" />
+                <span>Emergency Call</span>
+              </a>
+              <a 
+                href="mailto:cristian.berzan@icloud.com" 
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors duration-200"
+              >
+                <Mail className="h-5 w-5" />
+                <span>Emergency Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center space-x-3 mb-6">
+            <Snowflake className="h-8 w-8 text-blue-400" />
+            <span className="text-2xl font-bold">Cristian's Snow Removal</span>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-6">
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Full Name</h4>
+              <p className="text-gray-400">Cristian Berzan</p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Phone</h4>
+              <a 
+                href="tel:5794908622" 
+                className="text-blue-400 hover:text-white transition-colors duration-200 block"
+              >
+                (579) 490-8622
+              </a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Email</h4>
+              <a 
+                href="mailto:cristian.berzan@icloud.com" 
+                className="text-blue-400 hover:text-white transition-colors duration-200 block break-all"
+              >
+                cristian.berzan@icloud.com
+              </a>
+            </div>
+          </div>
+          
+          <p className="text-gray-500 text-sm">
+            Proudly serving the community with reliable snow removal since 2014 • Hardworking teenager with 10+ years of experience
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
